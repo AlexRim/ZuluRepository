@@ -17,22 +17,25 @@ namespace ConsoleApp1
 
         private MyPoint rightBottom;
 
-        public double RectangleHeight => Sqrt(Pow(leftTop.Y - leftBottom.Y, 2) + Pow(leftTop.X - leftBottom.X, 2));
-        public double RectangleWidth => Sqrt(Pow(leftBottom.X - rightBottom.X, 2) + Pow(leftBottom.Y - rightBottom.Y,2));
-            
+        public double RectangleHeight => Sqrt(Pow(LeftTop.Y - LeftBottom.Y, 2) + Pow(LeftTop.X - LeftBottom.X, 2));
+        public double RectangleWidth => Sqrt(Pow(LeftBottom.X - RightBottom.X, 2) + Pow(LeftBottom.Y - RightBottom.Y,2));
 
+        internal MyPoint LeftTop { get => leftTop; set => leftTop = value; }
+        internal MyPoint LeftBottom { get => leftBottom; set => leftBottom = value; }
+        internal MyPoint RightTop { get => rightTop; set => rightTop = value; }
+        internal MyPoint RightBottom { get => rightBottom; set => rightBottom = value; }
 
         public MainRectangle(MyPoint lt, MyPoint lb, MyPoint rt, MyPoint rb)
         {
-            this.leftTop = lt;
-            this.rightBottom = rb;
-            this.leftBottom = lb;
-            this.rightTop = rt;
+            this.LeftTop = lt;
+            this.RightBottom = rb;
+            this.LeftBottom = lb;
+            this.RightTop = rt;
         }
 
         public override string ToString()
         {
-            return leftBottom.ToString() + " " + leftTop.ToString()+ " "+rightBottom.ToString()+" "+rightTop.ToString() ;
+            return LeftBottom.ToString() + " " + LeftTop.ToString()+ " "+RightBottom.ToString()+" "+RightTop.ToString() ;
         }
 
 
