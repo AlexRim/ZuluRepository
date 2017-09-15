@@ -46,6 +46,7 @@ namespace ConsoleApp1
 
             for (int i = 0; i <= secondForCount; i++)
             {
+                x = rect.LeftBottom.X;
                 for (int j = 0; j <=firstForCount; j++)
                 {
                     this.pointsList.Add(new MyPoint(x, y));
