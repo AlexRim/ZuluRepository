@@ -22,12 +22,13 @@ namespace ConsoleApp1
 
         public List<MyPoint> PointsList { get => pointsList; }
 
+    
+
         public FindPoints(MainRectangle rect, int rectCount)
         {
             this.rectCount = rectCount;
             delta = CalcDelta(rect);
-            FindAllPoints(rect);
-
+            FindAllPoints(rect);     
         }
 
         private double CalcDelta(MainRectangle rect) => Sqrt(rect.RectangleHeight * rect.RectangleWidth / rectCount);
@@ -55,6 +56,20 @@ namespace ConsoleApp1
                 y += delta;
             }
       
+        }
+
+        public List<MainRectangle> GetRectangles(List<MyPoint> listPoint)
+        {
+            var list = new List<MainRectangle>();
+            for (int i = 0; i < listPoint.Count; i++)
+            {
+                var lb = pointsList[i];
+                var lt = new MyPoint(pointsList[i].X, pointsList[i].Y + delta);
+                var rb = new MyPoint(pointsList[i].X + delta, pointsList[i].Y);
+                var rt = new MyPoint(pointsList[i].X + delta, pointsList[i].Y + delta);
+                list.Add(new MainRectangle(lt, lb, rt, rb));
+            }
+            return list;
         }
        
 

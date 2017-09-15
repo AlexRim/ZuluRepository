@@ -35,7 +35,7 @@ namespace ConsoleApp1
 
         public override string ToString()
         {
-            return LeftBottom.ToString() + " " + LeftTop.ToString()+ " "+RightBottom.ToString()+" "+RightTop.ToString() ;
+            return  LeftBottom.ToString() + ":" + LeftTop.ToString()+ ":"+RightBottom.ToString()+":"+RightTop.ToString() ;
         }
 
 

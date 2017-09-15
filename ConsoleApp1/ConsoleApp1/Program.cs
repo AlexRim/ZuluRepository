@@ -17,10 +17,13 @@ namespace ConsoleApp1
 
             var rect = new MainRectangle(lt, lb, rt, rb);
 
-            var findPoints = new FindPoints(rect, 50);
+            var findPoints = new FindPoints(rect, 100);
             var list = findPoints.PointsList;
             int z = 0;
-            foreach(var i in list)
+
+            var listRect = findPoints.GetRectangles(list);
+
+            foreach(var i in listRect)
             {
                 z++;
                 Console.WriteLine(z+") "+ i.ToString());
