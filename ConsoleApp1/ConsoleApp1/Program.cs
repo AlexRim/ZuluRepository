@@ -17,7 +17,7 @@ namespace ConsoleApp1
 
             var rect = new MainRectangle(lt, lb, rt, rb);
 
-            var findPoints = new FindPoints(rect, 100);
+            var findPoints = new FindPoints(rect,255);
             var list = findPoints.PointsList;
             int z = 0;
 
