@@ -44,9 +44,9 @@ namespace ConsoleApp1
             double y = rect.LeftBottom.Y;
          
 
-            for (int i = 0; i < secondForCount; i++)
+            for (int i = 0; i <= secondForCount; i++)
             {
-                for (int j = 0; j < firstForCount; j++)
+                for (int j = 0; j <=firstForCount; j++)
                 {
                     this.pointsList.Add(new MyPoint(x, y));
                     x += delta;

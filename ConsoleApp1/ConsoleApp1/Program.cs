@@ -19,10 +19,11 @@ namespace ConsoleApp1
 
             var findPoints = new FindPoints(rect, 100);
             var list = findPoints.PointsList;
-
+            int z = 0;
             foreach(var i in list)
             {
-                Console.WriteLine(i.ToString());
+                z++;
+                Console.WriteLine(z+") "+ i.ToString());
             }
 
             Console.ReadKey();
